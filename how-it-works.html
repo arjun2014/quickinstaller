@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- =================================================================== -->
+    <!-- Primary SEO Meta Tags -->
+    <!-- =================================================================== -->
+    <title>How It Works - QuickInstaller</title>
+    <meta name="description" content="Discover the technology behind QuickInstaller. Learn how client-side JavaScript and Chocolatey work together to create a safe, fast, and private installation experience.">
+    <meta name="keywords" content="how quickinstaller works, javascript blob api, chocolatey installer, client-side application, safe software installation">
+    <meta name="author" content="Arjun Singh">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quickinstaller.js.org/how-it-works.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' stroke='%230071e3' fill='none' d='M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25'/></svg>">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="How It Works - QuickInstaller">
+    <meta property="og:description" content="Discover the technology behind QuickInstaller.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quickinstaller.js.org/how-it-works.html">
+    <meta property="og:image" content="https://quickinstaller.js.org/social-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How It Works - QuickInstaller">
+    <meta name="twitter:description" content="Discover the technology behind QuickInstaller.">
+    <meta name="twitter:image" content="https://quickinstaller.js.org/social-preview.png">
+    <meta name="twitter:site" content="@tomake">
+
+    <!-- Mobile & App Specific Meta Tags -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="QuickInstaller">
+    
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #F5F5F7;
+        }
+        .sticky-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .content-prose {
+            @apply text-lg text-gray-600 leading-relaxed;
+        }
+        .content-prose h2 {
+            @apply text-3xl font-bold text-black tracking-tight mt-12 mb-4;
+        }
+        .content-prose a {
+            @apply text-blue-600 hover:underline;
+        }
+        .content-prose strong {
+            @apply font-semibold text-gray-800;
+        }
+        .step-card {
+            @apply bg-white p-8 rounded-lg shadow-sm border border-gray-200;
+        }
+        .step-number {
+            @apply text-5xl font-bold text-blue-600/20;
+        }
+        .step-title {
+            @apply text-2xl font-bold text-black tracking-tight;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Content Area -->
+    <div id="main-content">
+
+        <!-- Sticky Navigation -->
+        <nav id="sticky-nav" class="sticky top-0 z-50 w-full bg-white/80 border-b border-gray-200/80 transition-all duration-300">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="flex items-center justify-between h-16">
+                    <a href="./index.html" class="flex items-center space-x-2">
+                        <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+                        </svg>
+                        <span class="font-bold text-lg">QuickInstaller</span>
+                    </a>
+                    <div class="flex items-center space-x-6">
+                        <a href="./index.html" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">Home</a>
+                        <a href="./about.html" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">About</a>
+                        <a href="./how-it-works.html" class="text-sm font-bold text-blue-600">How It Works</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="container mx-auto max-w-4xl px-4">
+            
+            <header class="text-center py-24 sm:py-32">
+                <h1 class="text-5xl sm:text-7xl font-bold text-black tracking-tighter">Under the Hood</h1>
+                <p class="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">A look at the simple, powerful technology that makes QuickInstaller work.</p>
+            </header>
+
+            <main class="space-y-8 content-prose mx-auto">
+                <div class="step-card">
+                    <div class="flex items-start gap-6">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h2 class="step-title mt-0">You Pick Your Apps</h2>
+                            <p>The first step happens right on our main page. You browse through a curated list of hundreds of popular applications. As you click on an app, a simple JavaScript event listener registers your choice. This all happens in your browser, and your selections are stored temporarily on your machine, not on our servers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="flex items-start gap-6">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h2 class="step-title mt-0">The Script is Generated</h2>
+                            <p>This is where the magic happens. When you click "Generate Script," our client-side JavaScript gets to work. It takes the list of apps you selected and formats them into a valid Windows Batch (<code>.bat</code>) script. Using the browser's <strong>Blob API</strong>, it creates a new file directly in your computer's memory. A download link is then created for this file, and the download starts automatically. <strong>Your data never leaves your computer.</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="flex items-start gap-6">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h2 class="step-title mt-0">You Run the Script</h2>
+                            <p>Once you run the downloaded <code>QuickInstaller.bat</code> file as an administrator, it performs a few key actions:</p>
+                            <ul class="mt-4 space-y-2">
+                                <li>It first checks if you have the <strong><a href="https://chocolatey.org/" target="_blank" rel="noopener noreferrer">Chocolatey</a></strong> package manager. If not, it installs it for you—this is the engine that powers the whole process.</li>
+                                <li>Next, it loops through each application you selected and tells Chocolatey to install it using the <code>choco install</code> command.</li>
+                                <li>Each installation is performed <strong>silently and without bloatware</strong>, meaning you won't have to click through any setup wizards or uncheck any bundled offers.</li>
+                            </ul>
+                            <p class="mt-4">The result is a clean, automated setup of all your favorite software in a fraction of the time it would take to do it manually.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="mt-24 pt-8 border-t border-gray-200">
+                <div class="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">About QuickInstaller</h4>
+                        <p class="text-sm text-gray-500">A free, open-source tool by Arjun Singh to simplify setting up your Windows PC. Built for the community.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Resources</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="https://github.com/arjun2014/quickinstaller/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">GitHub Repository</a></li>
+                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">More Info (README)</a></li>
+                             <li><a href="./about.html" class="text-gray-500 hover:text-blue-600 transition">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Legal</h4>
+                         <ul class="space-y-2 text-sm">
+                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">View License (MIT)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+                    <p class="text-sm text-gray-500">
+                        QuickInstaller &copy; 2024 by Arjun Singh. We have no affiliation with Chocolatey or any of the applications listed on this site.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-white/80 p-3 rounded-full shadow-md hover:bg-gray-100 transition backdrop-blur-sm">
+        <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+    </button>
+
+<script>
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        backToTopBtn.classList.toggle('hidden', window.scrollY < 400);
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
