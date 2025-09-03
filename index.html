@@ -9,8 +9,8 @@
     <!-- Primary SEO Meta Tags -->
     <!-- =================================================================== -->
     <title>QuickInstaller - The Ultimate Bulk App Installer for Windows</title>
-    <meta name="description" content="Save time by installing and updating all your favorite Windows applications at once. Select your apps, get a custom script, and automate your setup. Free, safe, and no bloatware.">
-    <meta name="keywords" content="bulk app installer, windows setup, ninite alternative, chocolatey, software installer, app installer, windows automation, new pc setup, fresh install apps, silent install, unattended install, multiple programs, batch install, script installer, windows 10 apps, windows 11 setup, dev tools installer, productivity apps, free software installer, javascript project, js.org">
+    <meta name="description" content="Save time with the fastest bulk app installer for Windows. Install multiple programs at once with a single click. A free, open-source alternative to Ninite.">
+    <meta name="keywords" content="bulk app installer, fast software installer, one-click installer, windows setup, ninite alternative, chocolatey, software installer, automatic program installer, install multiple apps, quick pc setup, batch program installer, QuickInstaller vs Ninite, best windows installer 2025, silent installer">
     <meta name="author" content="Arjun Singh">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://quickinstaller.js.org" />
@@ -40,8 +40,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -83,6 +86,22 @@
             color: #0071e3;
             font-weight: 600;
         }
+        .faq-answer {
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .faq-question.open + .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+            padding-top: 0.5rem;
+            margin-top: -0.5rem;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faq-question.open .faq-arrow {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -98,11 +117,11 @@
                         <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
                         </svg>
-                        <span class="font-bold text-lg">QuickInstaller</span>
+                        <span class="font-bold text-xl">QuickInstaller</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <p class="text-sm text-gray-500 hidden sm:block"><span id="sticky-selected-count" class="font-semibold text-gray-800">0</span> apps selected</p>
-                        <button id="sticky-generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed">
+                        <button id="sticky-generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed">
                             Generate Script
                         </button>
                     </div>
@@ -114,13 +133,13 @@
         <div class="container mx-auto max-w-7xl px-4">
             
             <header class="text-center py-24 sm:py-32">
-                <div class="flex justify-center items-center gap-4 mb-4">
+                 <div class="flex justify-center items-center gap-4 mb-4">
                     <svg class="h-12 w-12 sm:h-16 sm:w-16 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
                     </svg>
-                    <h1 class="text-5xl sm:text-7xl font-bold text-black tracking-tighter">QuickInstaller</h1>
+                    <h1 class="text-5xl sm:text-7xl font-extrabold text-black tracking-tighter">QuickInstaller</h1>
                 </div>
-                <p class="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">The simplest way to set up your Windows PC.</p>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">The simplest way to set up your Windows PC.</p>
                 <p class="mt-4 text-lg font-semibold text-blue-600">Powered by Open Source.</p>
             </header>
 
@@ -137,7 +156,7 @@
                 <main class="flex-1 space-y-16">
                     <div>
                         <div class="flex flex-col sm:flex-row justify-between items-baseline mb-6">
-                            <h2 class="text-3xl font-bold text-black tracking-tight">1. Pick your apps</h2>
+                            <h2 class="text-4xl font-bold text-black tracking-tight">1. Pick your apps</h2>
                              <div class="flex items-center gap-4 mt-2 sm:mt-0">
                                 <button id="select-all-btn" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">Select All</button>
                                 <button id="deselect-all-btn" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">Deselect All</button>
@@ -150,44 +169,95 @@
                             <input type="text" id="search-box" placeholder="Search for an app..." class="w-full pl-11 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
                         </div>
                     
-                        <div id="app-categories" class="space-y-10"></div>
+                        <div id="app-categories" class="space-y-12"></div>
                         <div id="no-results" class="hidden text-center py-10"><p class="text-gray-500">No applications found matching your search.</p></div>
                     </div>
 
                     <div class="pt-12 border-t border-gray-200 text-center">
-                         <h2 class="text-3xl font-bold text-black tracking-tight mb-4">2. Get your installer</h2>
-                         <p class="text-gray-500 max-w-2xl mx-auto mb-8">Your custom script is ready to be generated. It will contain all the applications you've selected.</p>
+                         <h2 class="text-4xl font-bold text-black tracking-tight mb-4">2. Get your installer</h2>
+                         <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Your custom script is ready to be generated. It will contain all the applications you've selected.</p>
                         <div class="flex flex-col items-center">
-                            <button id="generate-btn" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-lg transform hover:scale-105">
+                            <button id="generate-btn" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-lg transform hover:scale-105">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
                                 <span id="button-text">Get Your QuickInstaller</span>
                             </button>
-                            <p class="mt-4 text-sm text-gray-500"><span id="selected-count" class="font-semibold text-gray-800">0</span> applications selected.</p>
+                            <p class="mt-4 text-base text-gray-500"><span id="selected-count" class="font-semibold text-gray-900">0</span> applications selected.</p>
                         </div>
                     </div>
                 </main>
             </div>
             
+            <!-- =================================================================== -->
+            <!-- NEW REDESIGNED CONTENT SECTION -->
+            <!-- =================================================================== -->
+            <section class="mt-24 pt-16 border-t border-gray-200">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-5xl font-extrabold text-black tracking-tighter">The Modern Way to Set Up Your PC</h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Stop wasting hours manually downloading installers. QuickInstaller is a <strong>fast software installer</strong> that streamlines your entire setup process into a single, automated script.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                    <!-- Feature 1: Time-Saving Automation -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                            <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-black">Time-Saving Automation</h3>
+                        <p class="mt-2 text-gray-600">Why spend hours clicking through installers? As a <strong>bulk app installer</strong>, QuickInstaller lets you <strong>install multiple apps at once</strong>, turning a tedious chore into a simple, one-click process. It's the ultimate tool to <strong>speed up Windows setup</strong>.</p>
+                    </div>
+                    <!-- Feature 2: Safe & Clean -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                            <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-black">Safe & Clean Installs</h3>
+                        <p class="mt-2 text-gray-600">Our <strong>silent installer for apps</strong> leverages the trusted Chocolatey repository. This means no bloatware, no toolbars, and no hidden adware—just the clean, official versions of the software you want. It's a <strong>hassle-free program installer</strong> you can trust.</p>
+                    </div>
+                    <!-- Feature 3: Always Up-to-Date -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                           <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.25a3.75 3.75 0 013.75-3.75H18a3.75 3.75 0 013.75 3.75v.267m-11.594 0h4.992" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-black">Always Up-to-Date</h3>
+                        <p class="mt-2 text-gray-600">Forget searching for the latest versions. QuickInstaller automatically fetches the most recent stable release of every application, ensuring your new PC setup starts with modern, secure, and feature-rich software from day one.</p>
+                    </div>
+                </div>
+
+                <div class="mt-24 max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-extrabold text-black tracking-tighter text-center">Frequently Asked Questions</h2>
+                    <div id="faq-container" class="mt-8 space-y-4">
+                        <!-- FAQ items will be injected here -->
+                    </div>
+                </div>
+            </section>
+
             <footer class="text-center mt-24 pt-8 border-t border-gray-200">
                 <div class="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
                     <div>
-                        <h4 class="font-semibold text-gray-800 mb-3">About QuickInstaller</h4>
-                        <p class="text-sm text-gray-500">A free, open-source tool by Arjun Singh to simplify setting up your Windows PC. Built for the community.</p>
+                        <h4 class="font-semibold text-gray-900 mb-3">About QuickInstaller</h4>
+                        <p class="text-sm text-gray-600">A free, open-source tool by Arjun Singh to simplify setting up your Windows PC. Built for the community.</p>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800 mb-3">Resources</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">Resources</h4>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="https://github.com/arjun2014/quickinstaller/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">GitHub Repository</a></li>
-                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">More Info (README)</a></li>
-                            <li><a href="https://quickinstaller.js.org/about" class="text-gray-500 hover:text-blue-600 transition">About Us</a></li>
-                            <li><a href="./how-it-works.html" class="text-gray-500 hover:text-blue-600 transition">How It Works</a></li>
+                            <li><a href="https://github.com/arjun2014/quickinstaller/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">GitHub Repository</a></li>
+                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">More Info (README)</a></li>
+                            <li><a href="https://quickinstaller.js.org/about" class="text-gray-600 hover:text-blue-600 transition">About Us</a></li>
+                            <li><a href="https://quickinstaller.js.org/how-it-works" class="text-gray-600 hover:text-blue-600 transition">How It Works</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800 mb-3">Legal</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">Legal</h4>
                          <ul class="space-y-2 text-sm">
-                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition">View License (MIT)</a></li>
-                        </ul>
+                            <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">View License (MIT)</a></li>
+                            <li><a href="./privacy-policy.html" class="text-gray-600 hover:text-blue-600 transition">Privacy Policy</a></li>
+                         </ul>
                     </div>
                 </div>
                 <div class="mt-12 pt-8 border-t border-gray-200">
@@ -195,7 +265,7 @@
                         QuickInstaller &copy; 2025 by Arjun Singh. We have no affiliation with Chocolatey or any of the applications listed on this site.
                     </p>
                 </div>
-                <a href="https://www.producthunt.com/products/quickinstaller/reviews?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-quickinstaller" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1104116&theme=light" alt="QuickInstaller - Install&#0032;all&#0032;your&#0032;programs&#0032;at&#0032;once&#0046;&#0032;No&#0032;Clicking&#0032;Installers&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                 <a href="https://www.producthunt.com/products/quickinstaller/reviews?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-quickinstaller" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1104116&theme=light" alt="QuickInstaller - Install&#0032;all&#0032;your&#0032;programs&#0032;at&#0032;once&#0046;&#0032;No&#0032;Clicking&#0032;Installers&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
             </footer>
         </div>
     </div>
@@ -363,6 +433,14 @@
         { id: 'vmware-workstation-player', name: 'VMware Player', category: 'Virtualization' },
     ];
 
+    const faqItems = [
+        { question: "How does QuickInstaller compare to Ninite?", answer: "The **QuickInstaller vs Ninite** discussion is a common one. Ninite is a fantastic service that pioneered the bulk installer concept. QuickInstaller offers a powerful, free, and open-source alternative with some key philosophical differences. Our app list is often broader, especially for developer tools and open-source software. The most significant difference is our privacy model; as a fully client-side tool, your app selections are never sent to our servers. For users looking for **QuickInstaller alternatives** or a more transparent process, our tool is an ideal choice." },
+        { question: "Is this really the fastest installer for Windows?", answer: "When you combine the time saved from manually downloading and clicking through installers, QuickInstaller is undoubtedly one of the fastest ways to set up a Windows PC from scratch. Our **one-click installer comparison** with other methods shows a dramatic time reduction. The script automates the entire process, making it a leading contender for the **best Windows installer of 2025** for efficiency." },
+        { question: "Can I create customizable installation packages?", answer: "Absolutely. That's the core feature! Every script you generate is a fully **customizable installation package** tailored to your exact needs. This is far more flexible than all-in-one packs that may include software you don't want. You have full control, making it a highly adaptable **multi-software setup tool**." },
+        { question: "Is QuickInstaller truly free to use?", answer: "Yes, 100%. QuickInstaller is a free tool provided as a service to the community. It is an open-source project, and we have no plans for paid tiers or features. The underlying technology, Chocolatey, is also free for individual use." },
+        { question: "Is it safe to run a script from the internet?", answer: "This is an excellent and important question. We designed QuickInstaller with transparency in mind. The `.bat` file you download is a simple text file. We strongly encourage you to open it in Notepad or any text editor before running it. You will see that it contains only the simple, documented commands to install Chocolatey (if you don't have it) and the apps you selected. There is no hidden or obfuscated code." }
+    ];
+
     // --- DOM ELEMENT REFERENCES ---
     const mainContent = document.getElementById('main-content');
     const thankyouScreen = document.getElementById('thankyou-screen');
@@ -379,6 +457,7 @@
     const backToMainLink = document.getElementById('back-to-main');
     const categorySidebar = document.getElementById('category-sidebar');
     const backToTopBtn = document.getElementById('back-to-top');
+    const faqContainer = document.getElementById('faq-container');
     
     // --- GLOBAL STATE ---
     let generatedScriptBlobUrl = null;
@@ -400,7 +479,7 @@
         categoryOrder.forEach(category => {
             if(groupedApps[category]) {
                 html += `<div id="category-${category.replace(/\s+/g, '-')}">`;
-                html += `<h3 class="text-2xl font-bold text-black tracking-tight pb-2 mb-4">${category}</h3>`;
+                html += `<h3 class="text-3xl font-bold text-black tracking-tight pb-2 mb-6">${category}</h3>`;
                 html += `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">`;
                 groupedApps[category].sort((a, b) => a.name.localeCompare(b.name)).forEach(app => {
                     const isChecked = document.getElementById(app.id)?.checked || false;
@@ -433,6 +512,31 @@
             sidebarHtml += `<a href="#category-${category.replace(/\s+/g, '-')}" class="category-link block text-gray-500 hover:text-blue-600 transition">${category}</a>`;
         });
         categorySidebar.innerHTML = sidebarHtml;
+    }
+
+    function populateFAQ() {
+        let faqHtml = '';
+        faqItems.forEach(item => {
+            faqHtml += `
+                <div class="border-b border-gray-200 py-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <span class="text-lg font-semibold text-black">${item.question}</span>
+                        <svg class="faq-arrow h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer text-gray-600 text-base leading-relaxed pt-2">
+                        ${marked.parseInline(item.answer)}
+                    </div>
+                </div>
+            `;
+        });
+        faqContainer.innerHTML = faqHtml;
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('open');
+            });
+        });
     }
 
     function updateSelectionState() {
@@ -615,6 +719,7 @@ exit /b
     function initialize() {
         populateSidebar();
         populateAppGrid();
+        populateFAQ();
         document.querySelectorAll('[id^="category-"]').forEach(section => observer.observe(section));
     }
 
@@ -622,6 +727,4 @@ exit /b
 </script>
 </body>
 </html>
-
-
 
