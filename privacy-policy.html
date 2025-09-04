@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags for this page -->
+    <title>Privacy Policy - QuickInstaller</title>
+    <meta name="description" content="Read the privacy policy for QuickInstaller to understand how we handle data. Spoiler: We don't collect any of your personal information.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quickinstaller.js.org/privacy-policy.html" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' stroke='%230071e3' fill='none' d='M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25'/></svg>">
+
+     
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles from main page -->
+    <style>
+        :root {
+            --brand-blue: #0071e3;
+            --bg-color: #F8F8FA;
+            --text-primary: #1D1D1F;
+            --text-secondary: #515154;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.75);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Styles for the policy content for better readability */
+        .policy-content h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800; /* extrabold */
+            letter-spacing: -0.025em; /* tracking-tight */
+            margin-top: 2.5rem; /* mt-10 */
+            margin-bottom: 1rem; /* mb-4 */
+            border-bottom: 1px solid #e5e7eb; /* border-b */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        .policy-content h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* bold */
+            margin-top: 2rem; /* mt-8 */
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        .policy-content p, .policy-content ul {
+            margin-bottom: 1rem; /* mb-4 */
+            line-height: 1.75; /* leading-relaxed */
+            color: var(--text-secondary);
+        }
+        .policy-content a {
+            color: var(--brand-blue);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+        .policy-content a:hover {
+            color: #005bb5;
+        }
+        .policy-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem; /* pl-6 */
+        }
+        .policy-content strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Sticky Navigation -->
+    <nav id="sticky-nav" class="sticky top-0 z-50 w-full transition-all duration-300">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-2" aria-label="Back to Home">
+                    <svg class="h-6 w-6 text-var(--text-primary)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+                    </svg>
+                    <span class="font-bold text-xl text-var(--text-primary)">QuickInstaller</span>
+                </a>
+                <a href="/#main-content" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                    Back to App Selection
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
+        
+        <header class="text-left mb-12">
+            <h1 class="text-5xl sm:text-6xl font-black tracking-tighter">Privacy Policy</h1>
+            <p class="mt-4 text-xl text-var(--text-secondary)">Last Updated: September 4, 2025</p>
+        </header>
+
+        <main class="policy-content">
+            <h3>1. Introduction</h3>
+            <p>Welcome to QuickInstaller ("we," "us," or "our"). We are committed to protecting your privacy and providing a transparent experience. This Privacy Policy outlines our practices concerning information and privacy on our website, quickinstaller.js.org (the "Service"). Our fundamental principle is to avoid collecting any personal data from our users ("you"). This policy details that commitment.</p>
+            
+            <h2>2. Information We Do Not Collect</h2>
+            <p>QuickInstaller is a static, client-side web application. This architectural choice is deliberate to ensure your privacy. All application logic runs directly in your web browser, meaning your activity on our site is not processed or stored on our servers.</p>
+            <p>We want to be explicitly clear about the types of Personally Identifiable Information (PII) and other sensitive data that we <strong>DO NOT</strong> collect:</p>
+            <ul>
+                <li><strong>Personal Details:</strong> We do not ask for, receive, or store your name, email address, phone number, or physical address.</li>
+                <li><strong>Account Information:</strong> The Service does not have a login or account system, so we do not collect usernames, passwords, or any other account credentials.</li>
+                <li><strong>Your Application Choices:</strong> The specific applications you select to generate an installer script are processed only within your browser. This information is never sent to our servers or any third party.</li>
+                <li><strong>Device and Usage Information:</strong> We do not collect your IP address, browser type, operating system, device identifiers, hardware details, or any analytics about how you interact with our website.</li>
+                <li><strong>Tracking Data:</strong> We do not use tracking cookies, web beacons, pixels, or any other persistent tracking technologies to monitor your behavior on our site or across the web.</li>
+            </ul>
+
+            <h2>3. How the Service and Installer Script Work</h2>
+            <p>Understanding the process confirms our privacy-centric approach:</p>
+            <ul>
+                <li><strong>Script Generation:</strong> When you click the "Get Your QuickInstaller" button, a `.bat` (Batch) file is created dynamically using JavaScript that runs exclusively in your browser.</li>
+                <li><strong>Script Content:</strong> This script contains commands to install <a href="https://chocolatey.org/" target="_blank" rel="noopener noreferrer">Chocolatey</a>, a trusted package manager for Windows, if you don't have it. It then uses Chocolatey to download and install the applications you selected directly from official or community-maintained sources.</li>
+                <li><strong>User Responsibility:</strong> Once you download the script, its execution is entirely on your local machine. We do not track whether you run the script, which applications are successfully installed, or any errors that may occur. You are responsible for reviewing the script before execution.</li>
+            </ul>
+
+            <h2>4. Third-Party Services and Links</h2>
+            <p>While we do not collect your data, our Service relies on a few essential third-party services to function. These services operate under their own privacy policies.</p>
+            <ul>
+                <li><strong>GitHub Pages:</strong> Our website is hosted on GitHub Pages. GitHub may collect non-personal, aggregated visitor data (like page views) as part of their hosting service, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>. We do not have access to or use any of this information in a way that identifies you.</li>
+                <li><strong>Google Fonts:</strong> We use Google Fonts to provide high-quality typography. To serve these fonts, Google may process your IP address. For more details, please see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">their privacy policy</a>.</li>
+                <li><strong>Chocolatey Community Repository:</strong> The installer script interacts with the Chocolatey service to download software packages. Their data practices are governed by the <a href="https://chocolatey.org/privacy" target="_blank" rel="noopener noreferrer">Chocolatey Privacy Policy</a>.</li>
+            </ul>
+
+            <h2>5. Data Security</h2>
+            <p>We take reasonable measures to protect our website, such as using HTTPS (SSL/TLS) to encrypt the connection between your browser and our server. However, since we do not collect or store any of your personal data, the primary security consideration is on your end. We encourage you to inspect the downloaded `.bat` file in a text editor before running it to verify its contents are as expected.</p>
+
+            <h2>6. Your Rights</h2>
+            <p>Data privacy regulations often grant individuals rights over their personal data, such as the right to access, correct, or delete it. Since QuickInstaller does not collect or hold any of your personal information, these rights are not directly applicable. There is no data to access, correct, or delete. Your use of the site is anonymous by design.</p>
+
+            <h2>7. Children's Privacy</h2>
+            <p>Our Service is not intended for or directed at individuals under the age of 13. We do not knowingly collect, use, or disclose any personal information from children. If we learn that we have inadvertently collected such information, we will take steps to delete it.</p>
+
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. If we make material changes, we will update the "Last Updated" date at the top of this policy. We encourage you to review this page periodically to stay informed.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>Your privacy and trust are paramount to us. If you have any questions, concerns, or feedback about this Privacy Policy, please do not hesitate to reach out. The best way to contact us is by <a href="https://github.com/arjun2014/quickinstaller/issues" target="_blank" rel="noopener noreferrer">opening an issue on our GitHub repository</a>.</p>
+        </main>
+    </div>
+
+    <!-- Redesigned Footer -->
+    <footer class="text-center py-16 border-t border-gray-200">
+        <div class="container mx-auto max-w-5xl">
+            <p class="text-sm text-gray-500">
+                QuickInstaller &copy; 2025 by Arjun Singh. We have no affiliation with Chocolatey or any of the applications listed on this site.
+            </p>
+            <div class="mt-4">
+                <a href="/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
