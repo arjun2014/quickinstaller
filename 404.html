@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags for this page -->
+    <title>Page Not Found - QuickInstaller</title>
+    <meta name="description" content="The page you were looking for could not be found. Return to the QuickInstaller homepage to create your custom installation script.">
+    <meta name="robots" content="noindex, follow"> <!-- noindex tells search engines not to list this page -->
+
+    <!-- Favicon links (assuming they are in the root directory) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Shared Styles from main page -->
+    <style>
+        :root {
+            --brand-blue: #0071e3;
+            --bg-color: #F8F8FA;
+            --text-primary: #1D1D1F;
+            --text-secondary: #515154;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.75);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #1D1D1F, #4a4a4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Sticky Navigation -->
+    <nav id="sticky-nav" class="sticky top-0 z-50 w-full transition-all duration-300">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-2" aria-label="Back to Home">
+                    <svg class="h-6 w-6 text-var(--text-primary)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0_0_24_24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+                    </svg>
+                    <span class="font-bold text-xl text-var(--text-primary)">QuickInstaller</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container for 404 content -->
+    <div class="flex items-center justify-center min-h-screen -mt-16">
+        <div class="container mx-auto max-w-4xl px-4 py-16 sm:py-24 text-center">
+            
+            <h1 class="text-8xl sm:text-9xl font-black gradient-text tracking-tighter">404</h1>
+            <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-var(--text-primary) tracking-tight">Page Not Found</h2>
+            <p class="mt-4 text-lg text-var(--text-secondary) max-w-md mx-auto">Sorry, we couldn’t find the page you’re looking for. It might have been moved or deleted.</p>
+
+            <div class="mt-10">
+                <a href="/" class="bg-blue-600 text-white font-bold py-4 px-8 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20 text-lg">
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
