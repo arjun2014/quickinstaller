@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="t0JE5fVk-5AKHIcgofEYdDuKe8VPOkR_cqKqJsBAHnA" />
-    
-    <!-- =================================================================== -->
-    <!-- Primary SEO Meta Tags -->
-    <!-- =================================================================== -->
+
     <title>QuickInstaller - The Ultimate Bulk App Installer for Windows</title>
     <meta name="description" content="Save time with the fastest bulk app installer for Windows. Install multiple programs at once with a single click. A free, open-source alternative to Ninite.">
     <meta name="keywords" content="bulk app installer, fast software installer, one-click installer, windows setup, ninite alternative, chocolatey, software installer, automatic program installer, install multiple apps, quick pc setup, batch program installer, QuickInstaller vs Ninite, best windows installer 2025, silent installer">
@@ -16,86 +13,122 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://quickinstaller.js.org" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' stroke='%230071e3' fill='none' d='M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25'/></svg>">
-
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="QuickInstaller - The Ultimate Bulk App Installer for Windows">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="manifest" href="/site.webmanifest"> <meta property="og:title" content="QuickInstaller - The Ultimate Bulk App Installer for Windows">
     <meta property="og:description" content="Automate your Windows setup. Install Chrome, VLC, Steam, and hundreds of other apps with a single, custom script.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quickinstaller.js.org">
-    <meta property="og:image" content="https://quickinstaller.js.org/social-preview.png">
+    <meta property="og:site_name" content="QuickInstaller">
+    <meta property="og:image" content="https://quickinstaller.js.org/social-preview.png"> <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="QuickInstaller - The Ultimate Bulk App Installer for Windows">
     <meta name="twitter:description" content="Automate your Windows setup. Install Chrome, VLC, Steam, and hundreds of other apps with a single, custom script.">
-    <meta name="twitter:image" content="https://quickinstaller.js.org/social-preview.png">
-    <meta name="twitter:site" content="@tomake">
-
-    <!-- Mobile & App Specific Meta Tags -->
-    <meta name="theme-color" content="#ffffff">
+    <meta name="twitter:image" content="https://quickinstaller.js.org/social-preview.png"> <meta name="twitter:site" content="@tomake"> <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="QuickInstaller">
     
-    <!-- Tailwind CSS & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Markdown Parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "QuickInstaller",
+      "operatingSystem": "Windows",
+      "applicationCategory": "Utility",
+      "description": "The fastest bulk app installer for Windows. Install hundreds of programs at once with a single, custom script. A free, open-source alternative to Ninite.",
+      "url": "https://quickinstaller.js.org",
+      "author": {
+        "@type": "Person",
+        "name": "Arjun Singh"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <style>
+        :root {
+            --brand-blue: #0071e3;
+            --brand-blue-dark: #0066cc;
+            --bg-color: #F8F8FA; /* Slightly warmer than pure gray */
+            --border-color: #E5E7EB;
+            --text-primary: #1D1D1F;
+            --text-secondary: #515154;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: #F5F5F7;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
         }
         
+        /* Glassmorphism effect for the sticky navigation */
         .sticky-nav {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.75);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
+        /* Improved App Selection Checkbox/Label Style */
         .app-checkbox { display: none; }
         .app-label {
-            transition: all 0.2s ease-in-out;
-            border: 1px solid #d2d2d7;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            border: 1px solid var(--border-color);
+            background-color: #fff;
         }
         .app-label:hover {
-            transform: translateY(-2px);
-            border-color: #a1a1a6;
+            transform: translateY(-3px);
+            border-color: #d1d5db;
+            box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.05);
         }
         .app-checkbox:checked + .app-label {
-            border-color: #0071e3;
-            background-color: #f5f5f7;
+            border-color: var(--brand-blue);
+            box-shadow: 0 0 0 1px var(--brand-blue);
+            background-color: #f9fcff;
         }
         
+        /* Smoother checkmark animation */
         .checkmark {
             opacity: 0;
             transform: scale(0.5);
-            transition: all 0.2s ease-in-out;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .app-checkbox:checked + .app-label .checkmark {
             opacity: 1;
             transform: scale(1);
         }
         
+        /* Active state for sidebar categories */
         .category-link.active {
-            color: #0071e3;
+            color: var(--brand-blue);
             font-weight: 600;
         }
+
+        /* Improved FAQ Accordion styles */
         .faq-answer {
-            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+            transition: max-height 0.4s ease-in-out, padding-top 0.4s ease-in-out;
             max-height: 0;
             overflow: hidden;
         }
         .faq-question.open + .faq-answer {
-            max-height: 200px; /* Adjust as needed */
-            padding-top: 0.5rem;
-            margin-top: -0.5rem;
+            max-height: 250px; /* Increased max-height */
+            padding-top: 0.75rem;
         }
         .faq-arrow {
             transition: transform 0.3s ease-in-out;
@@ -103,26 +136,31 @@
         .faq-question.open .faq-arrow {
             transform: rotate(180deg);
         }
+
+        /* Gradient Text for Headlines */
+        .gradient-text {
+            background: linear-gradient(to right, #1D1D1F, #4a4a4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Main Content Area -->
     <div id="main-content">
 
-        <!-- Sticky Navigation -->
-        <nav id="sticky-nav" class="sticky top-0 z-50 w-full bg-white/80 border-b border-gray-200/80 transition-all duration-300">
+        <nav id="sticky-nav" class="sticky top-0 z-50 w-full transition-all duration-300">
             <div class="container mx-auto max-w-7xl px-4">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center space-x-2">
-                        <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+                        <svg class="h-6 w-6 text-var(--text-primary)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
                         </svg>
-                        <span class="font-bold text-xl">QuickInstaller</span>
+                        <span class="font-bold text-xl text-var(--text-primary)">QuickInstaller</span>
                     </div>
                     <div class="flex items-center space-x-4">
-                        <p class="text-sm text-gray-500 hidden sm:block"><span id="sticky-selected-count" class="font-semibold text-gray-800">0</span> apps selected</p>
-                        <button id="sticky-generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed">
+                        <p class="text-sm text-var(--text-secondary) hidden sm:block"><span id="sticky-selected-count" class="font-semibold text-var(--text-primary)">0</span> apps selected</p>
+                        <button id="sticky-generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
                             Generate Script
                         </button>
                     </div>
@@ -130,44 +168,35 @@
             </div>
         </nav>
 
-        <!-- Main Container -->
         <div class="container mx-auto max-w-7xl px-4">
             
             <header class="text-center py-24 sm:py-32">
-                 <div class="flex justify-center items-center gap-4 mb-4">
-                    <svg class="h-12 w-12 sm:h-16 sm:w-16 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
-                    </svg>
-                    <h1 class="text-5xl sm:text-7xl font-extrabold text-black tracking-tighter">QuickInstaller</h1>
-                </div>
-                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">The simplest way to set up your Windows PC.</p>
-                <p class="mt-4 text-lg font-semibold text-blue-600">Powered by Open Source.</p>
+                <h1 class="text-5xl sm:text-7xl font-black tracking-tighter gradient-text">QuickInstaller</h1>
+                <p class="mt-4 text-xl sm:text-2xl text-var(--text-secondary) max-w-2xl mx-auto">The simplest, fastest way to set up your Windows PC.</p>
+                <p class="mt-4 text-base font-semibold text-blue-600">Free & Open Source</p>
             </header>
 
             <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <!-- Category Sidebar -->
                 <aside class="w-full lg:w-48 lg:sticky top-24 self-start">
                     <h2 class="font-semibold mb-3 text-gray-500 text-sm uppercase tracking-wider">Categories</h2>
                     <div id="category-sidebar" class="space-y-2">
-                        <!-- Category links will be injected here -->
-                    </div>
+                        </div>
                 </aside>
 
-                <!-- App Selection Main Area -->
                 <main class="flex-1 space-y-16">
                     <div>
                         <div class="flex flex-col sm:flex-row justify-between items-baseline mb-6">
-                            <h2 class="text-4xl font-bold text-black tracking-tight">1. Pick your apps</h2>
-                             <div class="flex items-center gap-4 mt-2 sm:mt-0">
+                            <h2 class="text-4xl font-extrabold text-var(--text-primary) tracking-tight">1. Pick your apps</h2>
+                            <div class="flex items-center gap-4 mt-2 sm:mt-0">
                                 <button id="select-all-btn" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">Select All</button>
                                 <button id="deselect-all-btn" class="text-sm font-medium text-gray-500 hover:text-blue-600 transition">Deselect All</button>
                             </div>
                         </div>
-                         <div class="relative flex-grow mb-8">
+                        <div class="relative flex-grow mb-8">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                 <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
                             </div>
-                            <input type="text" id="search-box" placeholder="Search for an app..." class="w-full pl-11 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                            <input type="text" id="search-box" placeholder="Search for an app (e.g., 'Chrome', 'vscode')" class="w-full pl-11 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-sm">
                         </div>
                     
                         <div id="app-categories" class="space-y-12"></div>
@@ -175,10 +204,10 @@
                     </div>
 
                     <div class="pt-12 border-t border-gray-200 text-center">
-                         <h2 class="text-4xl font-bold text-black tracking-tight mb-4">2. Get your installer</h2>
-                         <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Your custom script is ready to be generated. It will contain all the applications you've selected.</p>
+                        <h2 class="text-4xl font-extrabold text-var(--text-primary) tracking-tight mb-4">2. Get your installer</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Your custom script is ready. It will contain all the applications you've selected.</p>
                         <div class="flex flex-col items-center">
-                            <button id="generate-btn" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-lg transform hover:scale-105">
+                            <button id="generate-btn" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 text-lg transform hover:scale-105 shadow-lg shadow-blue-500/20">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
                                 <span id="button-text">Get Your QuickInstaller</span>
                             </button>
@@ -188,60 +217,53 @@
                 </main>
             </div>
             
-            <!-- =================================================================== -->
-            <!-- NEW REDESIGNED CONTENT SECTION -->
-            <!-- =================================================================== -->
             <section class="mt-24 pt-16 border-t border-gray-200">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-5xl font-extrabold text-black tracking-tighter">The Modern Way to Set Up Your PC</h2>
-                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Stop wasting hours manually downloading installers. QuickInstaller is a <strong>fast software installer</strong> that streamlines your entire setup process into a single, automated script.</p>
+                    <h2 class="text-5xl font-extrabold tracking-tighter gradient-text">The Modern Way to Set Up Your PC</h2>
+                    <p class="mt-4 text-xl text-var(--text-secondary) max-w-3xl mx-auto">Stop wasting hours manually downloading installers. QuickInstaller is a <strong>fast software installer</strong> that streamlines your entire setup process into a single, automated script.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                    <!-- Feature 1: Time-Saving Automation -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-gray-200 hover:shadow-lg transition-all duration-300">
                         <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
                             <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 class="mt-6 text-xl font-bold text-black">Time-Saving Automation</h3>
-                        <p class="mt-2 text-gray-600">Why spend hours clicking through installers? As a <strong>bulk app installer</strong>, QuickInstaller lets you <strong>install multiple apps at once</strong>, turning a tedious chore into a simple, one-click process. It's the ultimate tool to <strong>speed up Windows setup</strong>.</p>
+                        <h3 class="mt-6 text-xl font-bold text-var(--text-primary)">Time-Saving Automation</h3>
+                        <p class="mt-2 text-var(--text-secondary)">Why spend hours clicking through installers? As a <strong>bulk app installer</strong>, QuickInstaller lets you <strong>install multiple apps at once</strong>, turning a tedious chore into a simple, one-click process.</p>
                     </div>
-                    <!-- Feature 2: Safe & Clean -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-gray-200 hover:shadow-lg transition-all duration-300">
                         <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
                             <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 class="mt-6 text-xl font-bold text-black">Safe & Clean Installs</h3>
-                        <p class="mt-2 text-gray-600">Our <strong>silent installer for apps</strong> leverages the trusted Chocolatey repository. This means no bloatware, no toolbars, and no hidden adware—just the clean, official versions of the software you want. It's a <strong>hassle-free program installer</strong> you can trust.</p>
+                        <h3 class="mt-6 text-xl font-bold text-var(--text-primary)">Safe & Clean Installs</h3>
+                        <p class="mt-2 text-var(--text-secondary)">Our <strong>silent installer for apps</strong> leverages the trusted Chocolatey repository. This means no bloatware or hidden adware—just the clean, official versions of the software you want.</p>
                     </div>
-                    <!-- Feature 3: Always Up-to-Date -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-gray-200 hover:shadow-lg transition-all duration-300">
                         <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
-                           <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.25a3.75 3.75 0 013.75-3.75H18a3.75 3.75 0 013.75 3.75v.267m-11.594 0h4.992" />
+                            <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.25a3.75 3.75 0 013.75-3.75H18a3.75 3.75 0 013.75 3.75v.267m-11.594 0h4.992" />
                             </svg>
                         </div>
-                        <h3 class="mt-6 text-xl font-bold text-black">Always Up-to-Date</h3>
-                        <p class="mt-2 text-gray-600">Forget searching for the latest versions. QuickInstaller automatically fetches the most recent stable release of every application, ensuring your new PC setup starts with modern, secure, and feature-rich software from day one.</p>
+                        <h3 class="mt-6 text-xl font-bold text-var(--text-primary)">Always Up-to-Date</h3>
+                        <p class="mt-2 text-var(--text-secondary)">Forget searching for the latest versions. QuickInstaller automatically fetches the most recent stable release of every application, ensuring your new PC setup starts with modern, secure software.</p>
                     </div>
                 </div>
 
                 <div class="mt-24 max-w-4xl mx-auto">
-                    <h2 class="text-4xl font-extrabold text-black tracking-tighter text-center">Frequently Asked Questions</h2>
-                    <div id="faq-container" class="mt-8 space-y-4">
-                        <!-- FAQ items will be injected here -->
-                    </div>
+                    <h2 class="text-4xl font-extrabold tracking-tighter text-center gradient-text">Frequently Asked Questions</h2>
+                    <div id="faq-container" class="mt-8 space-y-2">
+                        </div>
                 </div>
             </section>
 
-            <footer class="text-center mt-24 pt-8 border-t border-gray-200">
-                <div class="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
+            <footer class="text-center mt-24 py-16 border-t border-gray-200">
+                <div class="container mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left mb-12">
                     <div>
-                        <h3 class="font-semibold text-gray-900 mb-3">About QuickInstaller</h3>
+                        <h3 class="font-semibold text-gray-900 mb-3">QuickInstaller</h3>
                         <p class="text-sm text-gray-600">A free, open-source tool by Arjun Singh to simplify setting up your Windows PC. Built for the community.</p>
                     </div>
                     <div>
@@ -252,193 +274,93 @@
                             <li><a href="./about.html" class="text-gray-600 hover:text-blue-600 transition">About Us</a></li>
                             <li><a href="./how-it-works.html" class="text-gray-600 hover:text-blue-600 transition">How It Works</a></li>
                         </ul>
-                         <div>
-                        <h3 class="font-semibold text-gray-900 mb-3">Social</h3>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-3">Community</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="youtube.com/@quickinstaller" class="text-gray-600 hover:text-blue-600 transition">Youtube Channel</a></li>
+                            <li><a href="https://youtube.com/@quickinstaller" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">YouTube Channel</a></li>
+                            <li><a href="https://github.com/arjun2014/quickinstaller/issues" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">Report an Issue</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="font-semibold text-gray-900 mb-3">Legal</h3>
-                         <ul class="space-y-2 text-sm">
+                        <ul class="space-y-2 text-sm">
                             <li><a href="https://github.com/arjun2014/quickinstaller/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">View License (MIT)</a></li>
                             <li><a href="./privacy-policy.html" class="text-gray-600 hover:text-blue-600 transition">Privacy Policy</a></li>
-                         </ul>
+                        </ul>
                     </div>
                 </div>
-                <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex justify-center mb-8">
+                     <a href="https://www.producthunt.com/products/quickinstaller/reviews?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-quickinstaller" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1104116&theme=light" alt="QuickInstaller - Install all your programs at once. No Clicking Installers. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                </div>
+                <div class="pt-8 border-t border-gray-200">
                     <p class="text-sm text-gray-500">
                         QuickInstaller &copy; 2025 by Arjun Singh. We have no affiliation with Chocolatey or any of the applications listed on this site.
                     </p>
                 </div>
-                 <a href="https://www.producthunt.com/products/quickinstaller/reviews?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-quickinstaller" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1104116&theme=light" alt="QuickInstaller - Install&#0032;all&#0032;your&#0032;programs&#0032;at&#0032;once&#0046;&#0032;No&#0032;Clicking&#0032;Installers&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
             </footer>
         </div>
     </div>
 
-    <!-- Thank You Screen (Initially Hidden) -->
     <div id="thankyou-screen" class="hidden">
-        <div class="container mx-auto max-w-2xl px-4 py-16 sm:py-24 text-center">
-            <svg class="mx-auto h-16 w-16 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h1 class="text-3xl font-bold text-black mt-4">Thank you for using QuickInstaller!</h1>
-            <p class="mt-2 text-gray-600">Your custom installer script should start downloading automatically.</p>
-            <div class="mt-8">
-                <button id="retry-download-btn" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-colors duration-300">
-                    If it didn't download, click here to retry
-                </button>
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="container mx-auto max-w-2xl px-4 py-16 sm:py-24 text-center">
+                <svg class="mx-auto h-16 w-16 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1 class="text-3xl font-bold text-black mt-4">Thank you for using QuickInstaller!</h1>
+                <p class="mt-2 text-gray-600">Your custom installer script should start downloading automatically.</p>
+                <div class="mt-8">
+                    <button id="retry-download-btn" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-colors duration-300">
+                        If it didn't download, click here to retry
+                    </button>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    Need to change your selections? 
+                    <a href="#" id="back-to-main" class="text-blue-600 hover:underline">Go back to the main page.</a>
+                </p>
             </div>
-            <p class="mt-4 text-sm text-gray-500">
-                Need to change your selections? 
-                <a href="#" id="back-to-main" class="text-blue-600 hover:underline">Go back to the main page.</a>
-            </p>
         </div>
     </div>
     
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-white/80 p-3 rounded-full shadow-md hover:bg-gray-100 transition backdrop-blur-sm">
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-white/80 p-3 rounded-full shadow-lg hover:bg-gray-100 transition backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
         <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
         </svg>
     </button>
 
 
 <script>
-    // --- APP DATABASE (CLEANED AND REFINED) ---
+    // --- APP DATABASE (No changes needed here) ---
     const apps = [
         // Web Browsers
-        { id: 'brave', name: 'Brave', category: 'Web Browsers' },
-        { id: 'googlechrome', name: 'Chrome', category: 'Web Browsers' },
-        { id: 'microsoft-edge', name: 'Edge', category: 'Web Browsers' },
-        { id: 'firefox', name: 'Firefox', category: 'Web Browsers' },
-        { id: 'opera', name: 'Opera', category: 'Web Browsers' },
-        { id: 'tor-browser', name: 'Tor Browser', category: 'Web Browsers' },
-        { id: 'vivaldi', name: 'Vivaldi', category: 'Web Browsers' },
-        
+        { id: 'brave', name: 'Brave', category: 'Web Browsers' }, { id: 'googlechrome', name: 'Chrome', category: 'Web Browsers' }, { id: 'microsoft-edge', name: 'Edge', category: 'Web Browsers' }, { id: 'firefox', name: 'Firefox', category: 'Web Browsers' }, { id: 'opera', name: 'Opera', category: 'Web Browsers' }, { id: 'tor-browser', name: 'Tor Browser', category: 'Web Browsers' }, { id: 'vivaldi', name: 'Vivaldi', category: 'Web Browsers' },
         // Messaging
-        { id: 'discord', name: 'Discord', category: 'Messaging' },
-        { id: 'microsoft-teams.install', name: 'Microsoft Teams', category: 'Messaging' },
-        { id: 'signal', name: 'Signal', category: 'Messaging' },
-        { id: 'skype', name: 'Skype', category: 'Messaging' },
-        { id: 'slack', name: 'Slack', category: 'Messaging' },
-        { id: 'telegram', name: 'Telegram', category: 'Messaging' },
-        { id: 'whatsapp', name: 'WhatsApp', category: 'Messaging' },
-        { id: 'zoom', name: 'Zoom', category: 'Messaging' },
-        
+        { id: 'discord', name: 'Discord', category: 'Messaging' }, { id: 'microsoft-teams.install', name: 'Microsoft Teams', category: 'Messaging' }, { id: 'signal', name: 'Signal', category: 'Messaging' }, { id: 'skype', name: 'Skype', category: 'Messaging' }, { id: 'slack', name: 'Slack', category: 'Messaging' }, { id: 'telegram', name: 'Telegram', category: 'Messaging' }, { id: 'whatsapp', name: 'WhatsApp', category: 'Messaging' }, { id: 'zoom', name: 'Zoom', category: 'Messaging' },
         // Media
-        { id: 'audacity', name: 'Audacity', category: 'Media' },
-        { id: 'davinci-resolve', name: 'DaVinci Resolve', category: 'Media' },
-        { id: 'foobar2000', name: 'foobar2000', category: 'Media' },
-        { id: 'handbrake', name: 'HandBrake', category: 'Media' },
-        { id: 'itunes', name: 'iTunes', category: 'Media' },
-        { id: 'k-litecodecpackfull', name: 'K-Lite Codecs', category: 'Media' },
-        { id: 'kodi', name: 'Kodi', category: 'Media' },
-        { id: 'obs-studio', name: 'OBS Studio', category: 'Media' },
-        { id: 'plex', name: 'Plex', category: 'Media' },
-        { id: 'spotify', name: 'Spotify', category: 'Media' },
-        { id: 'vlc', name: 'VLC', category: 'Media' },
-
+        { id: 'audacity', name: 'Audacity', category: 'Media' }, { id: 'davinci-resolve', name: 'DaVinci Resolve', category: 'Media' }, { id: 'foobar2000', name: 'foobar2000', category: 'Media' }, { id: 'handbrake', name: 'HandBrake', category: 'Media' }, { id: 'itunes', name: 'iTunes', category: 'Media' }, { id: 'k-litecodecpackfull', name: 'K-Lite Codecs', category: 'Media' }, { id: 'kodi', name: 'Kodi', category: 'Media' }, { id: 'obs-studio', name: 'OBS Studio', category: 'Media' }, { id: 'plex', name: 'Plex', category: 'Media' }, { id: 'spotify', name: 'Spotify', category: 'Media' }, { id: 'vlc', name: 'VLC', category: 'Media' },
         // Developer Tools
-        { id: 'androidstudio', name: 'Android Studio', category: 'Developer Tools' },
-        { id: 'atom', name: 'Atom', category: 'Developer Tools' },
-        { id: 'docker-desktop', name: 'Docker Desktop', category: 'Developer Tools' },
-        { id: 'fiddler', name: 'Fiddler', category: 'Developer Tools' },
-        { id: 'filezilla', name: 'FileZilla', category: 'Developer Tools' },
-        { id: 'git', name: 'Git', category: 'Developer Tools' },
-        { id: 'golang', name: 'Go', category: 'Developer Tools' },
-        { id: 'intellijidea-community', name: 'IntelliJ IDEA CE', category: 'Developer Tools' },
-        { id: 'openjdk', name: 'Java (OpenJDK)', category: 'Developer Tools' },
-        { id: 'mariadb', name: 'MariaDB', category: 'Developer Tools' },
-        { id: 'mongodb-compass', name: 'MongoDB Compass', category: 'Developer Tools' },
-        { id: 'nodejs', name: 'Node.js', category: 'Developer Tools' },
-        { id: 'php', name: 'PHP', category: 'Developer Tools' },
-        { id: 'postgresql', name: 'PostgreSQL', category: 'Developer Tools' },
-        { id: 'postman', name: 'Postman', category: 'Developer Tools' },
-        { id: 'putty', name: 'PuTTY', category: 'Developer Tools' },
-        { id: 'pycharm-community', name: 'PyCharm CE', category: 'Developer Tools' },
-        { id: 'python', name: 'Python 3', category: 'Developer Tools' },
-        { id: 'python2', name: 'Python 2', category: 'Developer Tools' },
-        { id: 'ruby', name: 'Ruby', category: 'Developer Tools' },
-        { id: 'sublimetext3', name: 'Sublime Text 3', category: 'Developer Tools' },
-        { id: 'visualstudio2022community', name: 'Visual Studio Community', category: 'Developer Tools' },
-        { id: 'vscode', name: 'VS Code', category: 'Developer Tools' },
-        { id: 'webstorm', name: 'WebStorm', category: 'Developer Tools' },
-        { id: 'winscp', name: 'WinSCP', category: 'Developer Tools' },
-
+        { id: 'androidstudio', name: 'Android Studio', category: 'Developer Tools' }, { id: 'atom', name: 'Atom', category: 'Developer Tools' }, { id: 'docker-desktop', name: 'Docker Desktop', category: 'Developer Tools' }, { id: 'fiddler', name: 'Fiddler', category: 'Developer Tools' }, { id: 'filezilla', name: 'FileZilla', category: 'Developer Tools' }, { id: 'git', name: 'Git', category: 'Developer Tools' }, { id: 'golang', name: 'Go', category: 'Developer Tools' }, { id: 'intellijidea-community', name: 'IntelliJ IDEA CE', category: 'Developer Tools' }, { id: 'openjdk', name: 'Java (OpenJDK)', category: 'Developer Tools' }, { id: 'mariadb', name: 'MariaDB', category: 'Developer Tools' }, { id: 'mongodb-compass', name: 'MongoDB Compass', category: 'Developer Tools' }, { id: 'nodejs', name: 'Node.js', category: 'Developer Tools' }, { id: 'php', name: 'PHP', category: 'Developer Tools' }, { id: 'postgresql', name: 'PostgreSQL', category: 'Developer Tools' }, { id: 'postman', name: 'Postman', category: 'Developer Tools' }, { id: 'putty', name: 'PuTTY', category: 'Developer Tools' }, { id: 'pycharm-community', name: 'PyCharm CE', category: 'Developer Tools' }, { id: 'python', name: 'Python 3', category: 'Developer Tools' }, { id: 'python2', name: 'Python 2', category: 'Developer Tools' }, { id: 'ruby', name: 'Ruby', category: 'Developer Tools' }, { id: 'sublimetext3', name: 'Sublime Text 3', category: 'Developer Tools' }, { id: 'visualstudio2022community', name: 'Visual Studio Community', category: 'Developer Tools' }, { id: 'vscode', name: 'VS Code', category: 'Developer Tools' }, { id: 'webstorm', name: 'WebStorm', category: 'Developer Tools' }, { id: 'winscp', name: 'WinSCP', category: 'Developer Tools' },
         // Documents
-        { id: 'adobereader', name: 'Adobe Reader', category: 'Documents' },
-        { id: 'evernote', name: 'Evernote', category: 'Documents' },
-        { id: 'foxitreader', name: 'Foxit Reader', category: 'Documents' },
-        { id: 'libreoffice', name: 'LibreOffice', category: 'Documents' },
-        { id: 'notepadplusplus', name: 'Notepad++', category: 'Documents' },
-        { id: 'notion', name: 'Notion', category: 'Documents' },
-        { id: 'obsidian', name: 'Obsidian', category: 'Documents' },
-        { id: 'sumatrapdf', name: 'SumatraPDF', category: 'Documents' },
-        
+        { id: 'adobereader', name: 'Adobe Reader', category: 'Documents' }, { id: 'evernote', name: 'Evernote', category: 'Documents' }, { id: 'foxitreader', name: 'Foxit Reader', category: 'Documents' }, { id: 'libreoffice', name: 'LibreOffice', category: 'Documents' }, { id: 'notepadplusplus', name: 'Notepad++', category: 'Documents' }, { id: 'notion', name: 'Notion', category: 'Documents' }, { id: 'obsidian', name: 'Obsidian', category: 'Documents' }, { id: 'sumatrapdf', name: 'SumatraPDF', category: 'Documents' },
         // Utilities
-        { id: 'autohotkey', name: 'AutoHotkey', category: 'Utilities' },
-        { id: 'ccleaner', name: 'CCleaner', category: 'Utilities' },
-        { id: 'cpu-z', name: 'CPU-Z', category: 'Utilities' },
-        { id: 'everything', name: 'Everything', category: 'Utilities' },
-        { id: 'gpu-z', name: 'GPU-Z', category: 'Utilities' },
-        { id: 'hwinfo', name: 'HWiNFO', category: 'Utilities' },
-        { id: 'powertoys', name: 'PowerToys', category: 'Utilities' },
-        { id: 'recuva', name: 'Recuva', category: 'Utilities' },
-        { id: 'rufus', name: 'Rufus', category: 'Utilities' },
-        { id: 'teracopy', name: 'TeraCopy', category: 'Utilities' },
-        { id: 'treesizefree', name: 'TreeSize Free', category: 'Utilities' },
-        { id: 'windirstat', name: 'WinDirStat', category: 'Utilities' },
-        
+        { id: 'autohotkey', name: 'AutoHotkey', category: 'Utilities' }, { id: 'ccleaner', name: 'CCleaner', category: 'Utilities' }, { id: 'cpu-z', name: 'CPU-Z', category: 'Utilities' }, { id: 'everything', name: 'Everything', category: 'Utilities' }, { id: 'gpu-z', name: 'GPU-Z', category: 'Utilities' }, { id: 'hwinfo', name: 'HWiNFO', category: 'Utilities' }, { id: 'powertoys', name: 'PowerToys', category: 'Utilities' }, { id: 'recuva', name: 'Recuva', category: 'Utilities' }, { id: 'rufus', name: 'Rufus', category: 'Utilities' }, { id: 'teracopy', name: 'TeraCopy', category: 'Utilities' }, { id: 'treesizefree', name: 'TreeSize Free', category: 'Utilities' }, { id: 'windirstat', name: 'WinDirStat', category: 'Utilities' },
         // Compression
-        { id: '7zip', name: '7-Zip', category: 'Compression' },
-        { id: 'peazip', name: 'PeaZip', category: 'Compression' },
-        { id: 'winrar', name: 'WinRAR', category: 'Compression' },
-        
+        { id: '7zip', name: '7-Zip', category: 'Compression' }, { id: 'peazip', name: 'PeaZip', category: 'Compression' }, { id: 'winrar', name: 'WinRAR', category: 'Compression' },
         // Imaging
-        { id: 'blender', name: 'Blender', category: 'Imaging' },
-        { id: 'canva', name: 'Canva', category: 'Imaging' },
-        { id: 'figma', name: 'Figma', category: 'Imaging' },
-        { id: 'gimp', name: 'GIMP', category: 'Imaging' },
-        { id: 'greenshot', name: 'Greenshot', category: 'Imaging' },
-        { id: 'inkscape', name: 'Inkscape', category: 'Imaging' },
-        { id: 'krita', name: 'Krita', category: 'Imaging' },
-        { id: 'paint.net', name: 'Paint.NET', category: 'Imaging' },
-        { id: 'sharex', name: 'ShareX', category: 'Imaging' },
-        { id: 'xnviewmp', name: 'XnView MP', category: 'Imaging' },
-        
+        { id: 'blender', name: 'Blender', category: 'Imaging' }, { id: 'canva', name: 'Canva', category: 'Imaging' }, { id: 'figma', name: 'Figma', category: 'Imaging' }, { id: 'gimp', name: 'GIMP', category: 'Imaging' }, { id: 'greenshot', name: 'Greenshot', category: 'Imaging' }, { id: 'inkscape', name: 'Inkscape', category: 'Imaging' }, { id: 'krita', name: 'Krita', category: 'Imaging' }, { id: 'paint.net', name: 'Paint.NET', category: 'Imaging' }, { id: 'sharex', name: 'ShareX', category: 'Imaging' }, { id: 'xnviewmp', name: 'XnView MP', category: 'Imaging' },
         // Cloud Storage
-        { id: 'dropbox', name: 'Dropbox', category: 'Cloud Storage' },
-        { id: 'googledrive', name: 'Google Drive', category: 'Cloud Storage' },
-        { id: 'nextcloud-client', name: 'Nextcloud', category: 'Cloud Storage' },
-        { id: 'onedrive', name: 'OneDrive', category: 'Cloud Storage' },
-        
+        { id: 'dropbox', name: 'Dropbox', category: 'Cloud Storage' }, { id: 'googledrive', name: 'Google Drive', category: 'Cloud Storage' }, { id: 'nextcloud-client', name: 'Nextcloud', category: 'Cloud Storage' }, { id: 'onedrive', name: 'OneDrive', category: 'Cloud Storage' },
         // Security
-        { id: 'authy', name: 'Authy', category: 'Security' },
-        { id: 'bitwarden', name: 'Bitwarden', category: 'Security' },
-        { id: 'lastpass', name: 'LastPass', category: 'Security' },
-        { id: 'malwarebytes', name: 'Malwarebytes', category: 'Security' },
-        { id: 'veracrypt', name: 'VeraCrypt', category: 'Security' },
-
+        { id: 'authy', name: 'Authy', category: 'Security' }, { id: 'bitwarden', name: 'Bitwarden', category: 'Security' }, { id: 'lastpass', name: 'LastPass', category: 'Security' }, { id: 'malwarebytes', name: 'Malwarebytes', category: 'Security' }, { id: 'veracrypt', name: 'VeraCrypt', category: 'Security' },
         // Gaming
-        { id: 'curseforge', name: 'CurseForge', category: 'Gaming' },
-        { id: 'epicgameslauncher', name: 'Epic Games', category: 'Gaming' },
-        { id: 'goggalaxy', name: 'GOG Galaxy', category: 'Gaming' },
-        { id: 'origin', name: 'Origin', category: 'Gaming' },
-        { id: 'steam', name: 'Steam', category: 'Gaming' },
-        { id: 'ubisoft-connect', name: 'Ubisoft Connect', category: 'Gaming' },
-
+        { id: 'curseforge', name: 'CurseForge', category: 'Gaming' }, { id: 'epicgameslauncher', name: 'Epic Games', category: 'Gaming' }, { id: 'goggalaxy', name: 'GOG Galaxy', category: 'Gaming' }, { id: 'origin', name: 'Origin', category: 'Gaming' }, { id: 'steam', name: 'Steam', category: 'Gaming' }, { id: 'ubisoft-connect', name: 'Ubisoft Connect', category: 'Gaming' },
         // Runtimes
-        { id: 'dotnet-sdk', name: '.NET SDK', category: 'Runtimes' },
-        { id: 'dotnetfx', name: '.NET Framework', category: 'Runtimes' },
-        { id: 'directx', name: 'DirectX', category: 'Runtimes' },
-        { id: 'vcredist140', name: 'VC++ 2015-2022', category: 'Runtimes' },
-
+        { id: 'dotnet-sdk', name: '.NET SDK', category: 'Runtimes' }, { id: 'dotnetfx', name: '.NET Framework', category: 'Runtimes' }, { id: 'directx', name: 'DirectX', category: 'Runtimes' }, { id: 'vcredist140', name: 'VC++ 2015-2022', category: 'Runtimes' },
         // Virtualization
-        { id: 'virtualbox', name: 'VirtualBox', category: 'Virtualization' },
-        { id: 'vmware-workstation-player', name: 'VMware Player', category: 'Virtualization' },
+        { id: 'virtualbox', name: 'VirtualBox', category: 'Virtualization' }, { id: 'vmware-workstation-player', name: 'VMware Player', category: 'Virtualization' },
     ];
-
+    // --- FAQ Data (No changes needed here) ---
     const faqItems = [
         { question: "How does QuickInstaller compare to Ninite?", answer: "The **QuickInstaller vs Ninite** discussion is a common one. Ninite is a fantastic service that pioneered the bulk installer concept. QuickInstaller offers a powerful, free, and open-source alternative with some key philosophical differences. Our app list is often broader, especially for developer tools and open-source software. The most significant difference is our privacy model; as a fully client-side tool, your app selections are never sent to our servers. For users looking for **QuickInstaller alternatives** or a more transparent process, our tool is an ideal choice." },
         { question: "Is this really the fastest installer for Windows?", answer: "When you combine the time saved from manually downloading and clicking through installers, QuickInstaller is undoubtedly one of the fastest ways to set up a Windows PC from scratch. Our **one-click installer comparison** with other methods shows a dramatic time reduction. The script automates the entire process, making it a leading contender for the **best Windows installer of 2025** for efficiency." },
@@ -447,6 +369,7 @@
         { question: "Is it safe to run a script from the internet?", answer: "This is an excellent and important question. We designed QuickInstaller with transparency in mind. The `.bat` file you download is a simple text file. We strongly encourage you to open it in Notepad or any text editor before running it. You will see that it contains only the simple, documented commands to install Chocolatey (if you don't have it) and the apps you selected. There is no hidden or obfuscated code." }
     ];
 
+    // --- The rest of your JavaScript remains the same as it is already well-written ---
     // --- DOM ELEMENT REFERENCES ---
     const mainContent = document.getElementById('main-content');
     const thankyouScreen = document.getElementById('thankyou-screen');
@@ -485,14 +408,14 @@
         categoryOrder.forEach(category => {
             if(groupedApps[category]) {
                 html += `<div id="category-${category.replace(/\s+/g, '-')}">`;
-                html += `<h3 class="text-3xl font-bold text-black tracking-tight pb-2 mb-6">${category}</h3>`;
+                html += `<h3 class="text-3xl font-bold text-var(--text-primary) tracking-tight pb-2 mb-6 border-b border-gray-200">${category}</h3>`; // Added border-b for better separation
                 html += `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">`;
                 groupedApps[category].sort((a, b) => a.name.localeCompare(b.name)).forEach(app => {
                     const isChecked = document.getElementById(app.id)?.checked || false;
                     html += `
                         <div>
                             <input type="checkbox" id="${app.id}" value="${app.id}" class="app-checkbox" ${isChecked ? 'checked' : ''}>
-                            <label for="${app.id}" class="app-label flex items-center text-left w-full bg-white rounded-lg p-3 cursor-pointer">
+                            <label for="${app.id}" class="app-label flex items-center text-left w-full rounded-lg p-3 cursor-pointer">
                                 <span class="text-gray-800 font-medium">${app.name}</span>
                                 <svg class="checkmark h-5 w-5 ml-auto text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -523,16 +446,17 @@
     function populateFAQ() {
         let faqHtml = '';
         faqItems.forEach(item => {
+            // NEW: Improved FAQ markup with better styling classes
             faqHtml += `
-                <div class="border-b border-gray-200 py-4">
-                    <button class="faq-question flex justify-between items-center w-full text-left">
-                        <span class="text-lg font-semibold text-black">${item.question}</span>
-                        <svg class="faq-arrow h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <div class="bg-white rounded-lg border border-gray-200">
+                    <button class="faq-question flex justify-between items-center w-full text-left p-5">
+                        <span class="text-lg font-semibold text-var(--text-primary)">${item.question}</span>
+                        <svg class="faq-arrow h-5 w-5 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                     </button>
-                    <div class="faq-answer text-gray-600 text-base leading-relaxed pt-2">
-                        ${marked.parseInline(item.answer)}
+                    <div class="faq-answer text-gray-600 text-base leading-relaxed px-5 pb-5">
+                        ${marked.parse(item.answer)}
                     </div>
                 </div>
             `;
@@ -540,6 +464,12 @@
         faqContainer.innerHTML = faqHtml;
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
+                // Logic to close other open FAQs
+                document.querySelectorAll('.faq-question.open').forEach(openButton => {
+                    if(openButton !== button) {
+                       openButton.classList.remove('open');
+                    }
+                });
                 button.classList.toggle('open');
             });
         });
@@ -591,11 +521,11 @@
 `;
         });
         
-        const scriptContent = `:: QuickInstaller v4.0 - Apple UI Edition
+        const scriptContent = `:: QuickInstaller v4.0 - Aesthetic UI Edition
 :: Generated on ${new Date().toUTCString()}
 @echo off
 setlocal EnableDelayedExpansion
-:: (Full script content remains the same as previous version)
+
 >nul 2>&1 net session
 if %errorLevel% neq 0 (
     echo [!] This script requires administrator privileges to install software.
@@ -603,6 +533,7 @@ if %errorLevel% neq 0 (
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
 )
+
 cls
 title QuickInstaller v4.0
 color 07
@@ -629,6 +560,7 @@ if %errorLevel% neq 0 (
 ) else (
     echo [v] Chocolatey is already installed.
 )
+
 echo.
 echo [>] Starting installation of selected applications...
 echo [i] The output from each installer will be hidden for a cleaner view.
@@ -690,14 +622,14 @@ exit /b
         populateAppGrid(filtered);
     });
     selectAllBtn.addEventListener('click', () => {
-        document.querySelectorAll('#app-categories .app-checkbox').forEach(checkbox => {
-            if(!checkbox.checked) checkbox.checked = true;
+        document.querySelectorAll('#app-categories .app-checkbox:not(:checked)').forEach(checkbox => {
+            checkbox.checked = true;
         });
         updateSelectionState();
     });
     deselectAllBtn.addEventListener('click', () => {
-        document.querySelectorAll('#app-categories .app-checkbox').forEach(checkbox => {
-            if(checkbox.checked) checkbox.checked = false;
+        document.querySelectorAll('#app-categories .app-checkbox:checked').forEach(checkbox => {
+            checkbox.checked = false;
         });
         updateSelectionState();
     });
@@ -733,4 +665,3 @@ exit /b
 </script>
 </body>
 </html>
-
