@@ -1,18 +1,10 @@
 {
-    "vscode": {
-        "windows": [
-            "https://update.code.visualstudio.com/latest/win32-x64-user/stable"
-        ],
-        "mac": [
-            "https://update.code.visualstudio.com/latest/darwin/stable"
-        ]
-    },
-    "chrome": {
-        "windows": [
-            "https://dl.google.com/chrome/install/375.126/chrome_installer.exe"
-        ],
-        "mac": [
-            "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
-        ]
-    }
+  "vscode": {
+    "windows": "https://update.code.visualstudio.com/latest/win32-x64-user/stable",
+    "mac": "https://update.code.visualstudio.com/latest/darwin/stable"
+  },
+  "chrome": {
+    "windows": "https://dl.google.com/chrome/install/375.126/chrome_installer.exe",
+    "mac": "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
+  }
 }
