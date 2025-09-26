@@ -6,5 +6,131 @@
   "chrome": {
     "windows": "https://dl.google.com/chrome/install/375.126/chrome_installer.exe",
     "mac": "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
+  },
+  "firefox": {
+    "windows": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
+    "mac": "https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US"
+  },
+  "opera": {
+    "windows": "https://download.opera.com/download/get/?partner=www&opsys=Windows",
+    "mac": "https://download.opera.com/download/get/?partner=www&opsys=Mac"
+  },
+  "safari": {
+    "mac": "https://www.apple.com/safari/download/"
+  },
+  "notepad++": {
+    "windows": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.8.4.7.Installer.exe"
+  },
+  "sublime-text": {
+    "windows": "https://download.sublimetext.com/Sublime_Text_3_build_3211_x64_setup.exe",
+    "mac": "https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg"
+  },
+  "atom": {
+    "windows": "https://github.com/atom/atom/releases/latest/download/AtomSetup-x64.exe",
+    "mac": "https://github.com/atom/atom/releases/latest/download/Atom-mac.zip"
+  },
+  "vlc": {
+    "windows": "https://get.videolan.org/vlc/3.0.16.1/win64/vlc-3.0.16.1-win64.exe",
+    "mac": "https://get.videolan.org/vlc/3.0.16.1/mac/vlc-3.0.16.1.dmg"
+  },
+  "spotify": {
+    "windows": "https://download.scdn.co/SpotifySetup.exe",
+    "mac": "https://download.scdn.co/Spotify.dmg"
+  },
+  "zoom": {
+    "windows": "https://zoom.us/client/latest/ZoomInstaller.exe",
+    "mac": "https://zoom.us/client/latest/Zoom.pkg"
+  },
+  "discord": {
+    "windows": "https://dl.discordapp.net/distro/app/stable/0/0/windows/DiscordSetup.exe",
+    "mac": "https://discord.com/api/download?platform=osx"
+  },
+  "slack": {
+    "windows": "https://downloads.slack-edge.com/releases_windows/4.23.0/prod/x64/SlackSetup.exe",
+    "mac": "https://downloads.slack-edge.com/releases_mac/4.23.0/prod/x64/Slack-4.23.0-macOS.dmg"
+  },
+  "teams": {
+    "windows": "https://aka.ms/teamsdesktopinstaller",
+    "mac": "https://aka.ms/teamsdesktopinstaller"
+  },
+  "git": {
+    "windows": "https://git-scm.com/download/win",
+    "mac": "https://git-scm.com/download/mac"
+  },
+  "nodejs": {
+    "windows": "https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi",
+    "mac": "https://nodejs.org/dist/v16.13.2/node-v16.13.2.pkg"
+  },
+  "python": {
+    "windows": "https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe",
+    "mac": "https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg"
+  },
+  "java": {
+    "windows": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245476",
+    "mac": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245477"
+  },
+  "docker": {
+    "windows": "https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe",
+    "mac": "https://desktop.docker.com/mac/stable/Docker.dmg"
+  },
+  "postman": {
+    "windows": "https://dl.pstmn.io/download/latest/win64",
+    "mac": "https://dl.pstmn.io/download/latest/osx"
+  },
+  "visual-studio": {
+    "windows": "https://aka.ms/vs/17/release/vs_installer.exe",
+    "mac": "https://aka.ms/vs/17/release/Microsoft.VisualStudio.2022.dmg"
+  },
+  "android-studio": {
+    "windows": "https://dl.google.com/dl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-windows.exe",
+    "mac": "https://dl.google.com/dl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-mac.dmg"
+  },
+  "intellij-idea": {
+    "windows": "https://download.jetbrains.com/idea/ideaIC-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/idea/ideaIC-2021.2.4.dmg"
+  },
+  "pycharm": {
+    "windows": "https://download.jetbrains.com/python/pycharm-community-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/python/pycharm-community-2021.2.4.dmg"
+  },
+  "webstorm": {
+    "windows": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.dmg"
+  },
+  "clion": {
+    "windows": "https://download.jetbrains.com/cpp/CLion-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/cpp/CLion-2021.2.4.dmg"
+  },
+  "datagrip": {
+    "windows": "https://download.jetbrains.com/datagrip/DataGrip-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/datagrip/DataGrip-202202.2.4.dmg"
+  },
+  "rider": {
+    "windows": "https://download.jetbrains.com/rider/Rider-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/rider/Rider-2021.2.4.dmg"
+  },
+  "clover": {
+    "windows": "https://download.jetbrains.com/clover/Clover-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/clover/Clover-2021.2.4.dmg"
+  },
+  "webstorm": {
+    "windows": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.dmg"
+  },
+  "clion": {
+    "windows": "https://download.jetbrains.com/cpp/CLion-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/cpp/CLion-2021.2.4.dmg"
+  },
+  "datagrip": {
+    "windows": "https://download.jetbrains.com/datagrip/DataGrip-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/datagrip/DataGrip-202202.2.4.dmg"
+  },
+  "rider": {
+    "windows": "https://download.jetbrains.com/rider/Rider-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/rider/Rider-2021.2.4.dmg"
+  },
+  "clover": {
+    "windows": "https://download.jetbrains.com/clover/Clover-2021.2.4.exe",
+    "mac": "https://download.jetbrains.com/clover/Clover-2021.2.4.dmg"
   }
 }
