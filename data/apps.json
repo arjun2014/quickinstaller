@@ -1,37 +1,54 @@
 {
   "vscode": {
     "windows": "https://update.code.visualstudio.com/latest/win32-x64-user/stable",
-    "mac": "https://update.code.visualstudio.com/latest/darwin/stable"
+    "mac": "https://update.code.visualstudio.com/latest/darwin/stable",
+    "linux": "https://update.code.visualstudio.com/latest/linux-deb-x64/stable"
   },
   "chrome": {
     "windows": "https://dl.google.com/chrome/install/375.126/chrome_installer.exe",
     "mac": "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
   },
   "firefox": {
-    "windows": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
-    "mac": "https://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US"
+    "windows": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US",
+    "mac": "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US"
   },
   "opera": {
     "windows": "https://download.opera.com/download/get/?partner=www&opsys=Windows",
     "mac": "https://download.opera.com/download/get/?partner=www&opsys=Mac"
   },
+  "brave": {
+    "windows": "https://referrals.brave.com/latest/BraveBrowserSetup.exe",
+    "mac": "https://referrals.brave.com/latest/Brave-Browser.dmg"
+  },
+  "edge": {
+    "windows": "https://go.microsoft.com/fwlink/?linkid=2069324&platform=win10&brand=chromium",
+    "mac": "https://go.microsoft.com/fwlink/?linkid=2093504&platform=mac&brand=chromium"
+  },
+  "vivaldi": {
+    "windows": "https://downloads.vivaldi.com/stable/Vivaldi.5.4.2753.51.x64.exe",
+    "mac": "https://downloads.vivaldi.com/stable/Vivaldi.5.4.2753.51.universal.dmg"
+  },
   "safari": {
-    "mac": "https://www.apple.com/safari/download/"
+    "mac": "https://www.apple.com/safari/"
   },
   "notepad++": {
-    "windows": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.8.4.7.Installer.exe"
+    "windows": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.installer.x64.exe"
   },
   "sublime-text": {
-    "windows": "https://download.sublimetext.com/Sublime_Text_3_build_3211_x64_setup.exe",
-    "mac": "https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg"
+    "windows": "https://download.sublimetext.com/sublime_text_build_4126_x64_setup.exe",
+    "mac": "https://download.sublimetext.com/sublime_text_build_4126_mac.zip"
   },
   "atom": {
     "windows": "https://github.com/atom/atom/releases/latest/download/AtomSetup-x64.exe",
-    "mac": "https://github.com/atom/atom/releases/latest/download/Atom-mac.zip"
+    "mac": "https://github.com/atom/atom/releases/latest/download/atom-mac.zip"
+  },
+  "brackets": {
+    "windows": "https://github.com/brackets-cont/brackets/releases/latest/download/Brackets.Release.1.14.2.msi",
+    "mac": "https://github.com/brackets-cont/brackets/releases/latest/download/Brackets.Release.1.14.2.dmg"
   },
   "vlc": {
-    "windows": "https://get.videolan.org/vlc/3.0.16.1/win64/vlc-3.0.16.1-win64.exe",
-    "mac": "https://get.videolan.org/vlc/3.0.16.1/mac/vlc-3.0.16.1.dmg"
+    "windows": "https://get.videolan.org/vlc/latest/win64/vlc-3.0.18-win64.exe",
+    "mac": "https://get.videolan.org/vlc/latest/macosx/vlc-3.0.18-macos.dmg"
   },
   "spotify": {
     "windows": "https://download.scdn.co/SpotifySetup.exe",
@@ -42,95 +59,259 @@
     "mac": "https://zoom.us/client/latest/Zoom.pkg"
   },
   "discord": {
-    "windows": "https://dl.discordapp.net/distro/app/stable/0/0/windows/DiscordSetup.exe",
+    "windows": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86",
     "mac": "https://discord.com/api/download?platform=osx"
   },
   "slack": {
-    "windows": "https://downloads.slack-edge.com/releases_windows/4.23.0/prod/x64/SlackSetup.exe",
-    "mac": "https://downloads.slack-edge.com/releases_mac/4.23.0/prod/x64/Slack-4.23.0-macOS.dmg"
+    "windows": "https://downloads.slack-edge.com/releases/windows/4.29.149/prod/x64/SlackSetup.exe",
+    "mac": "https://downloads.slack-edge.com/releases/macos/4.29.149/prod/x64/Slack-4.29.149-macOS.dmg"
   },
   "teams": {
     "windows": "https://aka.ms/teamsdesktopinstaller",
     "mac": "https://aka.ms/teamsdesktopinstaller"
   },
+  "telegram": {
+    "windows": "https://td.telegram.org/tsetup/tsetup-x64.4.2.4.exe",
+    "mac": "https://telegram.org/dl/desktop/mac"
+  },
+  "whatsapp": {
+    "windows": "https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe",
+    "mac": "https://web.whatsapp.com/desktop/mac/files/WhatsApp.dmg"
+  },
+  "signal": {
+    "windows": "https://updates.signal.org/desktop/signal-desktop-win-5.59.0.exe",
+    "mac": "https://updates.signal.org/desktop/signal-desktop-mac-5.59.0.dmg"
+  },
   "git": {
     "windows": "https://git-scm.com/download/win",
     "mac": "https://git-scm.com/download/mac"
   },
+  "sourcetree": {
+    "windows": "https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-3.4.10.exe",
+    "mac": "https://product-downloads.atlassian.com/software/sourcetree/ga/SourceTree_4.2.0_246.zip"
+  },
+  "github-desktop": {
+    "windows": "https://central.github.com/deployments/desktop/desktop/latest/win32",
+    "mac": "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+  },
   "nodejs": {
-    "windows": "https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi",
-    "mac": "https://nodejs.org/dist/v16.13.2/node-v16.13.2.pkg"
+    "windows": "https://nodejs.org/dist/latest/node-latest-x64.msi",
+    "mac": "https://nodejs.org/dist/latest/node-latest.pkg"
   },
   "python": {
-    "windows": "https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe",
-    "mac": "https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg"
+    "windows": "https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe",
+    "mac": "https://www.python.org/ftp/python/3.10.7/python-3.10.7-macos11.pkg"
   },
   "java": {
     "windows": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245476",
     "mac": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245477"
   },
+  "ruby": {
+    "windows": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.1.2-1/rubyinstaller-3.1.2-1-x64.exe"
+  },
   "docker": {
-    "windows": "https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe",
-    "mac": "https://desktop.docker.com/mac/stable/Docker.dmg"
+    "windows": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+    "mac": "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
   },
   "postman": {
     "windows": "https://dl.pstmn.io/download/latest/win64",
     "mac": "https://dl.pstmn.io/download/latest/osx"
   },
+  "insomnia": {
+    "windows": "https://github.com/Kong/insomnia/releases/latest/download/Insomnia.Core-2022.6.0.exe",
+    "mac": "https://github.com/Kong/insomnia/releases/latest/download/Insomnia.Core-2022.6.0.dmg"
+  },
   "visual-studio": {
-    "windows": "https://aka.ms/vs/17/release/vs_installer.exe",
-    "mac": "https://aka.ms/vs/17/release/Microsoft.VisualStudio.2022.dmg"
+    "windows": "https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030",
+    "mac": "https://visualstudio.microsoft.com/thank-you-downloading-visual-studio-mac/?sku=communitymac&channel=stable&version=17.3.8.5&hostid=273517462.1664188448"
   },
   "android-studio": {
-    "windows": "https://dl.google.com/dl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-windows.exe",
-    "mac": "https://dl.google.com/dl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-mac.dmg"
+    "windows": "https://redirector.gvt1.com/edgedl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-windows.exe",
+    "mac": "https://redirector.gvt1.com/edgedl/android/studio/install/2021.2.1.16/android-studio-2021.2.1.16-mac.dmg"
   },
   "intellij-idea": {
-    "windows": "https://download.jetbrains.com/idea/ideaIC-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/idea/ideaIC-2021.2.4.dmg"
+    "windows": "https://download.jetbrains.com/idea/ideaIC-latest.exe",
+    "mac": "https://download.jetbrains.com/idea/ideaIC-latest.dmg"
   },
   "pycharm": {
-    "windows": "https://download.jetbrains.com/python/pycharm-community-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/python/pycharm-community-2021.2.4.dmg"
+    "windows": "https://download.jetbrains.com/python/pycharm-community-latest.exe",
+    "mac": "https://download.jetbrains.com/python/pycharm-community-latest.dmg"
   },
   "webstorm": {
-    "windows": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.dmg"
+    "windows": "https://download.jetbrains.com/webstorm/WebStorm-latest.exe",
+    "mac": "https://download.jetbrains.com/webstorm/WebStorm-latest.dmg"
   },
   "clion": {
-    "windows": "https://download.jetbrains.com/cpp/CLion-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/cpp/CLion-2021.2.4.dmg"
+    "windows": "https://download.jetbrains.com/cpp/CLion-latest.exe",
+    "mac": "https://download.jetbrains.com/cpp/CLion-latest.dmg"
   },
   "datagrip": {
-    "windows": "https://download.jetbrains.com/datagrip/DataGrip-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/datagrip/DataGrip-202202.2.4.dmg"
+    "windows": "https://download.jetbrains.com/datagrip/datagrip-latest.exe",
+    "mac": "https://download.jetbrains.com/datagrip/datagrip-latest.dmg"
   },
   "rider": {
-    "windows": "https://download.jetbrains.com/rider/Rider-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/rider/Rider-2021.2.4.dmg"
+    "windows": "https://download.jetbrains.com/rider/JetBrains.Rider-2022.2.3.exe",
+    "mac": "https://download.jetbrains.com/rider/JetBrains.Rider-2022.2.3.dmg"
   },
-  "clover": {
-    "windows": "https://download.jetbrains.com/clover/Clover-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/clover/Clover-2021.2.4.dmg"
+  "goland": {
+    "windows": "https://download.jetbrains.com/go/goland-2022.2.3.exe",
+    "mac": "https://download.jetbrains.com/go/goland-2022.2.3.dmg"
   },
-  "webstorm": {
-    "windows": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/webstorm/WebStorm-2021.2.4.dmg"
+  "virtualbox": {
+    "windows": "https://download.virtualbox.org/virtualbox/6.1.38/VirtualBox-6.1.38-153438-Win.exe",
+    "mac": "https://download.virtualbox.org/virtualbox/6.1.38/VirtualBox-6.1.38-153438-OSX.dmg"
   },
-  "clion": {
-    "windows": "https://download.jetbrains.com/cpp/CLion-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/cpp/CLion-2021.2.4.dmg"
+  "vmware-workstation-player": {
+    "windows": "https://www.vmware.com/go/getplayer-win",
+    "linux": "https://www.vmware.com/go/getplayer-linux"
   },
-  "datagrip": {
-    "windows": "https://download.jetbrains.com/datagrip/DataGrip-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/datagrip/DataGrip-202202.2.4.dmg"
+  "7zip": {
+    "windows": "https://www.7-zip.org/a/7z2201-x64.exe"
   },
-  "rider": {
-    "windows": "https://download.jetbrains.com/rider/Rider-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/rider/Rider-2021.2.4.dmg"
+  "winrar": {
+    "windows": "https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-611.exe"
   },
-  "clover": {
-    "windows": "https://download.jetbrains.com/clover/Clover-2021.2.4.exe",
-    "mac": "https://download.jetbrains.com/clover/Clover-2021.2.4.dmg"
+  "obs-studio": {
+    "windows": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-Full-Installer-x64.exe",
+    "mac": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-28.0.3-macOS-Intel.dmg"
+  },
+  "blender": {
+    "windows": "https://mirror.clarkson.edu/blender/release/Blender3.3/blender-3.3.0-windows-x64.msi",
+    "mac": "https://mirror.clarkson.edu/blender/release/Blender3.3/blender-3.3.0-macos-x64.dmg"
+  },
+  "gimp": {
+    "windows": "https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.32-setup-1.exe",
+    "mac": "https://download.gimp.org/gimp/v2.10/osx/gimp-2.10.32-x86_64.dmg"
+  },
+  "inkscape": {
+    "windows": "https://media.inkscape.org/dl/resources/file/inkscape-1.2.1_2022-07-14_9c6d41e410-x64.exe",
+    "mac": "https://media.inkscape.org/dl/resources/file/Inkscape-1.2.1.dmg"
+  },
+  "audacity": {
+    "windows": "https://github.com/audacity/audacity/releases/latest/download/audacity-win-3.2.0-x64.exe",
+    "mac": "https://github.com/audacity/audacity/releases/latest/download/audacity-macOS-3.2.0-x86_64.dmg"
+  },
+  "figma": {
+    "windows": "https://desktop.figma.com/win/FigmaSetup.exe",
+    "mac": "https://desktop.figma.com/mac/Figma.zip"
+  },
+  "sketch": {
+    "mac": "https://www.sketch.com/latest"
+  },
+  "dropbox": {
+    "windows": "https://www.dropbox.com/download?plat=win&type=full",
+    "mac": "https://www.dropbox.com/download?plat=mac&type=full"
+  },
+  "google-drive": {
+    "windows": "https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe",
+    "mac": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
+  },
+  "onedrive": {
+    "windows": "https://go.microsoft.com/fwlink/?linkid=860984",
+    "mac": "https://go.microsoft.com/fwlink/?linkid=823060"
+  },
+  "notion": {
+    "windows": "https://www.notion.so/desktop/windows/download",
+    "mac": "https://www.notion.so/desktop/mac/download"
+  },
+  "evernote": {
+    "windows": "https://evernote.com/download/get.php?file=Win",
+    "mac": "https://evernote.com/download/get.php?file=Mac"
+  },
+  "obsidian": {
+    "windows": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/Obsidian.Setup.exe",
+    "mac": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/Obsidian-1.0.0.dmg"
+  },
+  "authy": {
+    "windows": "https://authy.com/download/win64",
+    "mac": "https://authy.com/download/mac"
+  },
+  "1password": {
+    "windows": "https://c.1password.com/dist/1P/win6/1PasswordSetup-latest.exe",
+    "mac": "https://c.1password.com/dist/1P/mac8/1Password-latest.zip"
+  },
+  "bitwarden": {
+    "windows": "https://vault.bitwarden.com/download/?app=desktop&platform=windows",
+    "mac": "https://vault.bitwarden.com/download/?app=desktop&platform=macos"
+  },
+  "lastpass": {
+    "windows": "https://download.cloud.lastpass.com/windows_installer/lastpass.exe",
+    "mac": "https://download.cloud.lastpass.com/mac/LastPass.dmg"
+  },
+  "ccleaner": {
+    "windows": "https://download.ccleaner.com/ccsetup592.exe",
+    "mac": "https://download.ccleaner.com/mac/CCMacSetup120.dmg"
+  },
+  "putty": {
+    "windows": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.77-installer.msi"
+  },
+  "iterm2": {
+    "mac": "https://iterm2.com/downloads/stable/latest"
+  },
+  "windows-terminal": {
+    "windows": "ms-windows-store://pdp/?productid=9N0DX20HK701"
+  },
+  "filezilla": {
+    "windows": "https://dl3.cdn.filezilla-project.org/client/FileZilla_3.60.2_win64_sponsored-setup.exe",
+    "mac": "https://dl3.cdn.filezilla-project.org/client/FileZilla_3.60.2_macosx-x86.app.tar.bz2"
+  },
+  "cyberduck": {
+    "windows": "https://cyberduck.io/download/windows/",
+    "mac": "https://cyberduck.io/download/mac/"
+  },
+  "steam": {
+    "windows": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
+    "mac": "https://cdn.akamai.steamstatic.com/client/installer/steam.dmg"
+  },
+  "epic-games-launcher": {
+    "windows": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+    "mac": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncher.dmg"
+  },
+  "origin": {
+    "windows": "https://origin-a.akamaihd.net/Origin-Client-Download/origin/live/OriginSetup.exe",
+    "mac": "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/Origin.dmg"
+  },
+  "ubisoft-connect": {
+    "windows": "https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe"
+  },
+  "gog-galaxy": {
+    "windows": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.51.34.exe",
+    "mac": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/2.0.51.34/gog_galaxy_2.0.51.34.pkg"
+  },
+  "libreoffice": {
+    "windows": "https://tdf.mirror.liteserver.nl/libreoffice/stable/7.4.1/win/x86_64/LibreOffice_7.4.1_Win_x86-64.msi",
+    "mac": "https://tdf.mirror.liteserver.nl/libreoffice/stable/7.4.1/mac/x86_64/LibreOffice_7.4.1_MacOS_x86-64.dmg"
+  },
+  "shotcut": {
+    "windows": "https://github.com/mltframework/shotcut/releases/download/v22.09.23/shotcut-win64-220923.exe",
+    "mac": "https://github.com/mltframework/shotcut/releases/download/v22.09.23/shotcut-macos-x86_64-220923.dmg"
+  },
+  "handbrake": {
+    "windows": "https://github.com/HandBrake/HandBrake/releases/latest/download/HandBrake-1.5.1-x86_64-Win_GUI.exe",
+    "mac": "https://github.com/HandBrake/HandBrake/releases/latest/download/HandBrake-1.5.1.dmg"
+  },
+  "calibre": {
+    "windows": "https://download.calibre-ebook.com/6.7.1/calibre-64bit-6.7.1.msi",
+    "mac": "https://download.calibre-ebook.com/6.7.1/calibre-6.7.1.dmg"
+  },
+  "anydesk": {
+    "windows": "https://download.anydesk.com/AnyDesk.exe",
+    "mac": "https://download.anydesk.com/anydesk.dmg"
+  },
+  "teamviewer": {
+    "windows": "https://download.teamviewer.com/download/TeamViewer_Setup.exe",
+    "mac": "https://download.teamviewer.com/download/TeamViewer.dmg"
+  },
+  "powershell": {
+    "windows": "https://github.com/PowerShell/PowerShell/releases/latest/download/PowerShell-7.2.6-win-x64.msi",
+    "mac": "https://github.com/PowerShell/PowerShell/releases/latest/download/powershell-7.2.6-osx-x64.pkg"
+  },
+  "wireshark": {
+    "windows": "https://2.na.dl.wireshark.org/win64/Wireshark-win64-4.0.0.exe",
+    "mac": "https://2.na.dl.wireshark.org/osx/Wireshark%204.0.0%20Intel%2064.dmg"
+  },
+  "tor-browser": {
+    "windows": "https://dist.torproject.org/torbrowser/11.5.4/torbrowser-install-win64-11.5.4_en-US.exe",
+    "mac": "https://dist.torproject.org/torbrowser/11.5.4/TorBrowser-11.5.4-osx64_en-US.dmg"
   }
 }
