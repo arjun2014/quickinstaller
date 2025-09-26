@@ -1,8 +1,50 @@
-<html>
-  <head>
-    <title>QuickInstaller</title>
-  </head>
-  <body>
-    <h1>QuickInstaller MVP.</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickInstaller MVP</title>
+</head>
+<body>
+  <h1>QuickInstaller MVP</h1>
+  <p>Use <code>?i=app_name</code> in the URL to install apps.</p>
+
+  <script>
+    async function redirectApp() {
+      const params = new URLSearchParams(window.location.search);
+      const app = params.get('i');
+      if (!app) return; // no app specified
+
+      // Load apps.json
+      const res = await fetch('data/apps.json');
+      const apps = await res.json();
+
+      const appData = apps[app.toLowerCase()];
+      if (!appData) {
+        alert('App not found');
+        return;
+      }
+
+      const ua = navigator.userAgent;
+      let platform;
+
+      if (/windows/i.test(ua)) platform = 'windows';
+      else if (/mac/i.test(ua)) platform = 'mac';
+      else {
+        alert('Unsupported platform');
+        return;
+      }
+
+      const url = appData[platform];
+      if (!url) {
+        alert('No installer for your platform');
+        return;
+      }
+
+      // Redirect to installer
+      window.location.href = url;
+    }
+
+    redirectApp();
+  </script>
+</body>
 </html>
